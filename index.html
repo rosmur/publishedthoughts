@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimal Site</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -13,9 +19,9 @@
 
     <nav id="side-nav">
         <button id="menu-close" aria-label="Close menu">&times;</button>
-        <ul>
+        <ul class="newsreader-regular">
             <li><a href="#home">Home</a></li>
-            <li><a href="#writing">Writing</a></li>
+            <li><a href="#thoughts">Thoughts</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -23,11 +29,11 @@
     <main id="main-content">
         <section id="home" class="page active">
             <div class="centered-box">
-                <h1>Welcome</h1>
-                <p>This is the home page content.</p>
+                <h1 class="newsreader-medium-italic">Welcome</h1>
+                <p class="newsreader-regular">A home for worthwhile <a href="#thoughts">thoughts</a></p>
             </div>
         </section>
-        <section id="writing" class="page">
+        <section id="thoughts" class="page">
             <!-- Add Writing content here -->
             <p>Writing section placeholder.</p>
         </section>

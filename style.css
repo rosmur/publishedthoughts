@@ -147,6 +147,35 @@ body.nav-open #main-content {
     max-width: 500px;
 }
 
+.newsreader-regular {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.newsreader-medium {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.newsreader-medium-italic {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+}
+
+section#home .centered-box h1 {
+    font-size: 3rem;
+}
+
+section#home .centered-box p {
+    font-size: 1.2rem;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     #side-nav {
