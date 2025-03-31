@@ -1,0 +1,165 @@
+/* Basic Reset & Defaults */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #343a40;
+    /* Prevent horizontal scroll caused by nav transition */
+    overflow-x: hidden;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    /* Make buttons easier to click */
+    padding: 0.5rem;
+}
+
+/* Menu Toggle Button (Hamburger) */
+#menu-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    /* Above nav */
+    color: #343a40;
+}
+
+/* Side Navigation */
+#side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #e9ecef;
+    padding: 4rem 1.5rem 1.5rem;
+    /* Space for close button */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    border-right: 1px solid #dee2e6;
+}
+
+#side-nav.active {
+    transform: translateX(0);
+}
+
+#side-nav ul {
+    margin-top: 1rem;
+}
+
+#side-nav li {
+    margin-bottom: 1rem;
+}
+
+#side-nav a {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+#side-nav a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Menu Close Button */
+#menu-close {
+    position: absolute;
+    top: 0.75rem;
+    /* Align nicely with toggle */
+    right: 1rem;
+    font-size: 2rem;
+    color: #6c757d;
+}
+
+#menu-close:hover {
+    color: #343a40;
+}
+
+
+/* Main Content Area */
+#main-content {
+    padding: 2rem;
+    transition: margin-left 0.3s ease-in-out;
+    /* Smooth transition when nav opens */
+}
+
+/* Adjust main content margin when nav is potentially open */
+/* Using a class on body might be slightly more robust if needed */
+body.nav-open #main-content {
+    margin-left: 250px;
+    /* Same as nav width */
+}
+
+
+/* Page Sections */
+.page {
+    display: none;
+    /* Hide all pages by default */
+    min-height: 80vh;
+    /* Ensure content area takes up space */
+    padding: 1rem;
+}
+
+.page.active {
+    display: block;
+    /* Show the active page */
+}
+
+/* Centered Box for Home Page */
+#home.page.active {
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.centered-box {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #side-nav {
+        width: 200px;
+        /* Slightly smaller nav on smaller screens */
+    }
+
+    body.nav-open #main-content {
+        margin-left: 0;
+        /* Don't push content on small screens, nav overlays */
+    }
+
+    .centered-box {
+        padding: 1.5rem 2rem;
+    }
+}

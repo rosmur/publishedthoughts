@@ -1,1 +1,43 @@
-<p>Hello!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+
+    <nav id="side-nav">
+        <button id="menu-close" aria-label="Close menu">&times;</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <section id="home" class="page active">
+            <div class="centered-box">
+                <h1>Welcome</h1>
+                <p>This is the home page content.</p>
+            </div>
+        </section>
+        <section id="writing" class="page">
+            <!-- Add Writing content here -->
+            <p>Writing section placeholder.</p>
+        </section>
+        <section id="contact" class="page">
+            <!-- Add Contact content here -->
+            <p>Contact section placeholder.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
