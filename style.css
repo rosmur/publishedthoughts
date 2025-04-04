@@ -169,6 +169,15 @@ body.nav-open #main-content {
     padding-left: 0;
 }
 
+/* Styles for mobile devices (e.g., screens smaller than 600px) */
+@media (max-width: 600px) {
+    .center-x {
+        width: 90%;
+        /* Wider width for mobile */
+        /* Add other mobile-specific adjustments if needed */
+    }
+}
+
 .newsreader-regular {
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
